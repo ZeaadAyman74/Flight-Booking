@@ -8,7 +8,7 @@ import 'dio_interceptor.dart';
 
 class DioFactory {
   static  Dio? _dio;
-  Dio getDio() {
+  static Dio getDio() {
     _dio ??= Dio();
 
     const int timeout = 10 * 1000;

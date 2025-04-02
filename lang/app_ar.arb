@@ -1,0 +1,20 @@
+{
+  "search_flights": "البحث عن الرحلات",
+  "find_flights": "البحث عن رحلات طيران",
+  "where_would_you_like_to_fly": "الي اين تريد السفر؟",
+  "search_for_best_flight_deals": "البحث عن أفضل عروض رحلات الطيران",
+  "from": "من",
+  "to": "إلى",
+  "select_travel_date": "تحديد تاريخ السفر",
+  "please_enter_departure_city": "الرجاء إدخال مدينة المغادرة",
+  "please_enter_destination_city": "الرجاء إدخال مدينة الوجهة",
+  "please_select_travel_date": "يرجى تحديد تاريخ السفر",
+  "destination_must_be_different": "يجب أن تكون الوجهة مختلفة",
+  "flights": "الرحلات",
+  "no_flights_found": "لم يتم العثور على رحلات",
+  "price": "السعر",
+  "book_now": "احجز الآن",
+  "arrival": "الوصول",
+  "departure": "المغادرة"
+
+}

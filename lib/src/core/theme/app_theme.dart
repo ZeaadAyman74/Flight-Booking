@@ -1,3 +1,4 @@
+import 'package:flight_booking/gen/fonts.gen.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -6,7 +7,7 @@ import 'app_colors.dart';
 import 'theme_styles.dart';
 
 ThemeData get lightTheme => ThemeData(
-    // fontFamily: FontFamily.sfUiDisplay,
+    fontFamily: FontFamily.sfUiDisplay,
     brightness: Brightness.light,
     primaryColor: ColorsManager.primaryColor,
     hintColor: ColorsManager.hintColor,
@@ -22,7 +23,7 @@ ThemeData get lightTheme => ThemeData(
       color: ColorsManager.dividerColor,
     ),
     splashColor: Colors.transparent,
-    highlightColor: ColorsManager.black.withOpacity(0.1),
+    highlightColor: ColorsManager.black.withValues(alpha: 0.1),
     textSelectionTheme: const TextSelectionThemeData(
       cursorColor: ColorsManager.gray,
     ),
@@ -52,7 +53,7 @@ ThemeData get lightTheme => ThemeData(
 
         titleMedium: TextStyle(
           fontSize: 17.sp,
-          fontWeight: FontWeight.w500,
+          fontWeight: FontWeight.w700,
           color: ColorsManager.blueBlack,
         ), // used
 
@@ -70,7 +71,7 @@ ThemeData get lightTheme => ThemeData(
 
         bodySmall: TextStyle(
           fontWeight: FontWeight.w400,
-          fontSize: 16.sp,
+          fontSize: 14.sp,
           color: ColorsManager. hintColor,
         ), // used
 
@@ -138,7 +139,7 @@ ThemeData get lightTheme => ThemeData(
               fontSize: 16.sp,
               fontWeight: FontWeight.w500,
               color: Colors.white,
-              // fontFamily: FontFamily.sfUiDisplay
+              fontFamily: FontFamily.sfUiDisplay
           )
           ),
           // textStyle: ,
@@ -150,7 +151,7 @@ ThemeData get lightTheme => ThemeData(
       systemOverlayStyle: SystemUiOverlayStyle.dark,
       titleTextStyle: TextStyle(
         fontSize: 17.sp,
-        // fontFamily: FontFamily.sfUiDisplay,
+        fontFamily: FontFamily.sfUiDisplay,
         color: ColorsManager.blueBlack,
         fontWeight: FontWeight.w500,
       ),

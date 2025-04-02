@@ -63,7 +63,7 @@ abstract class NetworkExceptions with _$NetworkExceptions {
   const factory NetworkExceptions.unexpectedError(ValidationModel? validation) =
   UnexpectedError;
 
-  static Future<NetworkExceptions> handleResponse(Response? response) async {
+  static NetworkExceptions handleResponse(Response? response)  {
     GeneralResponseModel? errorModel;
     errorModel = GeneralResponseModel.fromJson(response?.data as Map<String, dynamic>);
     int statusCode = response?.statusCode ?? 0;
@@ -106,7 +106,7 @@ abstract class NetworkExceptions with _$NetworkExceptions {
     }
   }
 
-  static Future<NetworkExceptions> getDioException(error) async{
+  static NetworkExceptions getDioException(error) {
     if (error is Exception) {
       try {
         NetworkExceptions networkExceptions;
@@ -116,29 +116,29 @@ abstract class NetworkExceptions with _$NetworkExceptions {
               networkExceptions = const NetworkExceptions.requestCancelled();
               break;
             case DioExceptionType.connectionTimeout:
-              networkExceptions = await
+              networkExceptions =
               NetworkExceptions.handleResponse(error.response);
               break;
             case DioExceptionType.unknown:
-              networkExceptions =await
+              networkExceptions =
               NetworkExceptions.handleResponse(error.response);
               break;
             case DioExceptionType.sendTimeout:
-              networkExceptions = await
+              networkExceptions =
               NetworkExceptions.handleResponse(error.response);
               break;
             case DioExceptionType.badResponse:
-              networkExceptions = await
+              networkExceptions =
               NetworkExceptions.handleResponse(error.response);
               break;
             case DioExceptionType.badCertificate:
             case DioExceptionType.connectionError:
-              networkExceptions =await
+              networkExceptions =
               NetworkExceptions.handleResponse(error.response);
               break;
 
             case DioExceptionType.receiveTimeout:
-              networkExceptions =await
+              networkExceptions =
               NetworkExceptions.handleResponse(error.response);
               break;
           }

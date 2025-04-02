@@ -1,5 +1,6 @@
 import 'dart:math';
 import 'dart:developer' as dev;
+import 'package:flight_booking/src/core/widgets/app_bar_divider.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -43,6 +44,23 @@ extension TextExtention on TextEditingController {
   double toDouble() => double.tryParse(text) ?? 0;
 }
 
+//******************************************************************************
+
+extension AppBarExtension on AppBar {
+  ///* Return `AppBar` with divider
+  AppBar withDivider(String title, {bool withBackIcon=true, List<Widget>? actions}) {
+    return AppBar(
+      forceMaterialTransparency: true,
+      title: Text(title),
+      // leading: withBackIcon?const AppBackButton():const SizedBox.shrink(),
+      actions: actions,
+      bottom: PreferredSize(
+        preferredSize: Size.fromHeight(1.h), // Height of the border
+        child: const AppBarDivider(),
+      ),
+    );
+  }
+}
 //******************************************************************************
 
 ///* Print in log shortcuts `log()`

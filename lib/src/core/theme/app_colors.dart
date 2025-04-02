@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 class ColorsManager {
   ColorsManager._();
 
-  static const primaryColor = Color(0xFF2E92F8);
+  static const primaryColor = Color(0xff2262AD);
+  static const secondaryColor=Color(0xffF75D37);
   static const darkBue = Color(0xff183D92);
   static const blueBlack=Color(0xff1C2A4A);
   static const black=Colors.black;
@@ -18,15 +19,15 @@ class ColorsManager {
   static const white=Colors.white;
 
 
+
   // Light Theme Colors
   static const borderColorLight=Color(0xffC4C4C4);
-  static const textFieldBorderColor=Color(0xffE6E6E6);
   static const textFieldFillColor=Color(0xffF2F3F5);
   static const hintColor=Color(0xffB8C1CC);
   static const disabledTabBarColor=Color(0xff848F95);
   static const unSelectedDayColor=Color(0xffBCC2CE);
+  static const dividerColor=Color(0xffE6E6E6);
   static const appbarColorLight=white;
-  static const dividerColor=offWhite;
   static const refreshColor=primaryColor;
 
 
@@ -56,31 +57,5 @@ class ColorsManager {
     onPrimaryContainer: green,
     outlineVariant: orange,
     tertiaryContainer: gray,
-  );
-
-  static const LinearGradient shimmerGradient = LinearGradient(
-    colors: <Color>[
-      Color(0xFFEBEBF4),
-      Color(0xFFF4F4F4),
-      Color(0xFFEBEBF4),
-    ],
-    stops: <double>[
-      0.1,
-      0.3,
-      0.4,
-    ],
-  );
-
-  static const LinearGradient shimmerDarkGradient = LinearGradient(
-    colors: <Color>[
-      Color(0xFF7E7E7E),
-      Color(0xFFF4F4F4),
-      Color(0xFF7E7E7E),
-    ],
-    stops: <double>[
-      0.1,
-      0.3,
-      0.4,
-    ],
   );
 }

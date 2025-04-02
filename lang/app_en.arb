@@ -1,0 +1,19 @@
+{
+  "search_flights": "Search Flights",
+  "find_flights": "Find Flights",
+  "where_would_you_like_to_fly": "Where would you like to fly?",
+  "search_for_best_flight_deals": "Search for the best flight deals",
+  "from": "From",
+  "to": "To",
+  "select_travel_date": "Select travel date",
+  "please_enter_departure_city": "Please enter departure city",
+  "please_enter_destination_city": "Please enter destination city",
+  "please_select_travel_date": "Please select the travel date",
+  "destination_must_be_different": "Destination must be different",
+  "flights": "Flights",
+  "no_flights_found": "No Flights Found",
+  "price": "Price",
+  "book_now": "Book Now",
+  "arrival": "Arrival",
+  "departure": "Departure"
+}

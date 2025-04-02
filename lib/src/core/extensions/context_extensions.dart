@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:flight_booking/l10n/app_localizations.dart';
 import 'package:flight_booking/src/core/theme/app_colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -6,7 +7,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 
 extension BuildContextExtension on BuildContext {
-  // AppLocalizations get localization => AppLocalizations.of(this)!;
+  AppLocalizations get localization => AppLocalizations.of(this)!;
 
   TextTheme get textTheme => Theme.of(this).textTheme;
 
@@ -31,9 +32,9 @@ extension BuildContextExtension on BuildContext {
       Navigator.pushNamedAndRemoveUntil(this, routeName, (route) => false,
           arguments: args);
 
-  double get width => MediaQuery.of(this).size.width;
+  double get width => MediaQuery.sizeOf(this).width;
 
-  double get height => MediaQuery.of(this).size.height;
+  double get height => MediaQuery.sizeOf(this).height;
 
   double get topPadding => MediaQuery.of(this).viewPadding.top;
 
