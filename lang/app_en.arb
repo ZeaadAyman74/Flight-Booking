@@ -15,5 +15,19 @@
   "price": "Price",
   "book_now": "Book Now",
   "arrival": "Arrival",
-  "departure": "Departure"
+  "departure": "Departure",
+  "total_price": "Total Price",
+  "passenger_details": "Passenger Details",
+  "full_name": "Full Name",
+  "passport_number": "Passport Number",
+  "expiry_date": "Expiry Date",
+  "seat_preference": "Seat Preference",
+  "meal_preference": "Meal Preference",
+  "email": "Email",
+  "phone_number": "Phone Number",
+  "special_requests": "Special Requests",
+  "optional": "(Optional)",
+  "select_date": "Select Date",
+  "confirm_booking": "Confirm Booking",
+  "required_field": "Required Field"
 }

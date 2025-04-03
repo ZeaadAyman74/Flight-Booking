@@ -2,7 +2,6 @@ import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flight_booking/src/core/utils/copy_with_wrapper.dart';
 import 'package:flutter/material.dart';
-import 'package:meta/meta.dart';
 
 part 'search_state.dart';
 

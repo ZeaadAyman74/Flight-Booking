@@ -27,9 +27,10 @@ class CustomTextField extends StatelessWidget {
     this.contentPadding,
     this.inputAction,
     this.autofocus = false,
-    this.maxLength,
     this.initialValue,
     this.filled,
+    this.withBorder=true,
+    this.maxLines=1
   });
 
   final TextEditingController? controller;
@@ -48,13 +49,14 @@ class CustomTextField extends StatelessWidget {
   final String? hintText;
   final TextStyle? hintStyle;
   final TextStyle? inputStyle;
-  final int? maxLength;
   final Widget? prefixIcon;
   final Widget? suffixIcon;
   final EdgeInsetsGeometry? contentPadding;
   final bool autofocus;
   final TextInputAction? inputAction;
   final String? initialValue;
+  final bool withBorder;
+  final int? maxLines;
 
   @override
   Widget build(BuildContext context) {
@@ -63,15 +65,16 @@ class CustomTextField extends StatelessWidget {
       initialValue: initialValue,
       style: inputStyle ?? context.textTheme.bodyMedium!.copyWith(
           fontSize: 14.sp, fontWeight: FontWeight.w400),
+      maxLines: maxLines,
       decoration: InputDecoration(
         labelText: labelText,
         labelStyle: labelStyle,
         prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,
-        border: _border(context,),
-        enabledBorder: _border(context, color: borderColor,borderWidth: 1),
-        focusedBorder: _border(context,
-            color: focusedBorderColor ?? context.themeData.primaryColor,borderWidth: 2),
+        border:withBorder? _border(context,):null,
+        enabledBorder:withBorder? _border(context, color: borderColor,borderWidth: 1):null,
+        focusedBorder:withBorder? _border(context,
+            color: focusedBorderColor ?? context.themeData.primaryColor,borderWidth: 2):null,
         hintStyle: hintStyle ??
             context.textTheme.labelSmall?.copyWith(
                   color: ColorsManager.hintColor,

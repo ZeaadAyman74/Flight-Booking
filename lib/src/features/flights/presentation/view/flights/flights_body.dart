@@ -6,6 +6,6 @@ class FlightsBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FlightsList();
+    return const FlightsList();
   }
 }
