@@ -598,7 +598,7 @@ packages:
     source: hosted
     version: "6.0.1"
   pretty_dio_logger:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: pretty_dio_logger
       sha256: "36f2101299786d567869493e2f5731de61ce130faa14679473b26905a92b6407"
@@ -638,7 +638,7 @@ packages:
     source: hosted
     version: "1.5.0"
   quick_log:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: quick_log
       sha256: "94b0db8fe600c27788a8057496f0b51fdb799b5b35d8740ca141c9faf349dc48"

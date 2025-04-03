@@ -13,7 +13,7 @@ class FlightSearchBody extends StatelessWidget {
       padding:  EdgeInsets.symmetric(horizontal: 20.w,vertical: 25.h),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           TitleAndSubtitle(),
           SearchCard(),
           SearchButton()

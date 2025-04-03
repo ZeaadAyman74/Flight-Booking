@@ -56,4 +56,46 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get departure => 'المغادرة';
+
+  @override
+  String get total_price => 'السعر الإجمالي';
+
+  @override
+  String get passenger_details => 'تفاصيل المسافر';
+
+  @override
+  String get full_name => 'الاسم الكامل';
+
+  @override
+  String get passport_number => 'رقم جواز السفر';
+
+  @override
+  String get expiry_date => 'تاريخ الانتهاء';
+
+  @override
+  String get seat_preference => 'تفضيل المقعد';
+
+  @override
+  String get meal_preference => 'تفضيل الوجبة';
+
+  @override
+  String get email => 'البريد الإلكتروني';
+
+  @override
+  String get phone_number => 'رقم الهاتف';
+
+  @override
+  String get special_requests => 'طلبات خاصة';
+
+  @override
+  String get optional => '(اختياري)';
+
+  @override
+  String get select_date => 'اختر التاريخ';
+
+  @override
+  String get confirm_booking => 'تاكيد الحجز';
+
+  @override
+  String get required_field => 'هذا الحقل مطلوب';
 }

@@ -1,18 +1,20 @@
 import 'package:flight_booking/src/core/extensions/context_extensions.dart';
+import 'package:flight_booking/src/core/router/routes.dart';
 import 'package:flight_booking/src/core/widgets/custom_button.dart';
+import 'package:flight_booking/src/features/flights/data/models/flight_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
 
 class PriceAndBookButton extends StatelessWidget {
-  const PriceAndBookButton({super.key, required this.price});
+  const PriceAndBookButton({super.key, required this.flight});
 
-  final double price;
+  final FlightModel flight;
 
   @override
   Widget build(BuildContext context) {
     return Row(
-      // mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Expanded(
           child: Column(
@@ -26,7 +28,7 @@ class PriceAndBookButton extends StatelessWidget {
                 ),
               ),
               Text(
-                NumberFormat.currency(symbol: '\$').format(price),
+                NumberFormat.currency(symbol: '\$').format(flight.price),
                 style: context.textTheme.headlineMedium?.copyWith(
                   color: context.themeData.colorScheme.primary,
                   fontWeight: FontWeight.bold,
@@ -44,7 +46,9 @@ class PriceAndBookButton extends StatelessWidget {
               color: Colors.white,
               fontWeight: FontWeight.w600,
               fontSize: 13.sp),
-          onPressed: () {},
+          onPressed: () {
+            context.pushNamed(Routes.booking,extra: flight);
+          },
         )
       ],
     );

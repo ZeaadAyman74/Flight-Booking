@@ -27,9 +27,8 @@ class _FlightsScreenState extends State<FlightsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: ColorsManager.lightBlue,
       appBar: AppBar().withDivider(context.localization.flights),
-      body: FlightsBody(),
+      body:const FlightsBody(),
     );
   }
 }

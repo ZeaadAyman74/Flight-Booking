@@ -10,7 +10,7 @@ class FlightSearchScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar().withDivider(context.localization.find_flights),
-      body:FlightSearchBody() ,
+      body: const FlightSearchBody(),
     );
   }
 }

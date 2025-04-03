@@ -15,6 +15,20 @@
   "price": "السعر",
   "book_now": "احجز الآن",
   "arrival": "الوصول",
-  "departure": "المغادرة"
+  "departure": "المغادرة",
+  "total_price": "السعر الإجمالي",
+  "passenger_details": "تفاصيل المسافر",
+  "full_name": "الاسم الكامل",
+  "passport_number": "رقم جواز السفر",
+  "expiry_date": "تاريخ الانتهاء",
+  "seat_preference": "تفضيل المقعد",
+  "meal_preference": "تفضيل الوجبة",
+  "email": "البريد الإلكتروني",
+  "phone_number": "رقم الهاتف",
+  "special_requests": "طلبات خاصة",
+  "optional": "(اختياري)",
+  "select_date": "اختر التاريخ",
+  "confirm_booking": "تاكيد الحجز",
+  "required_field": "هذا الحقل مطلوب"
 
 }

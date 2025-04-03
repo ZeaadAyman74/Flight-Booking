@@ -196,6 +196,90 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Departure'**
   String get departure;
+
+  /// No description provided for @total_price.
+  ///
+  /// In en, this message translates to:
+  /// **'Total Price'**
+  String get total_price;
+
+  /// No description provided for @passenger_details.
+  ///
+  /// In en, this message translates to:
+  /// **'Passenger Details'**
+  String get passenger_details;
+
+  /// No description provided for @full_name.
+  ///
+  /// In en, this message translates to:
+  /// **'Full Name'**
+  String get full_name;
+
+  /// No description provided for @passport_number.
+  ///
+  /// In en, this message translates to:
+  /// **'Passport Number'**
+  String get passport_number;
+
+  /// No description provided for @expiry_date.
+  ///
+  /// In en, this message translates to:
+  /// **'Expiry Date'**
+  String get expiry_date;
+
+  /// No description provided for @seat_preference.
+  ///
+  /// In en, this message translates to:
+  /// **'Seat Preference'**
+  String get seat_preference;
+
+  /// No description provided for @meal_preference.
+  ///
+  /// In en, this message translates to:
+  /// **'Meal Preference'**
+  String get meal_preference;
+
+  /// No description provided for @email.
+  ///
+  /// In en, this message translates to:
+  /// **'Email'**
+  String get email;
+
+  /// No description provided for @phone_number.
+  ///
+  /// In en, this message translates to:
+  /// **'Phone Number'**
+  String get phone_number;
+
+  /// No description provided for @special_requests.
+  ///
+  /// In en, this message translates to:
+  /// **'Special Requests'**
+  String get special_requests;
+
+  /// No description provided for @optional.
+  ///
+  /// In en, this message translates to:
+  /// **'(Optional)'**
+  String get optional;
+
+  /// No description provided for @select_date.
+  ///
+  /// In en, this message translates to:
+  /// **'Select Date'**
+  String get select_date;
+
+  /// No description provided for @confirm_booking.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm Booking'**
+  String get confirm_booking;
+
+  /// No description provided for @required_field.
+  ///
+  /// In en, this message translates to:
+  /// **'Required Field'**
+  String get required_field;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

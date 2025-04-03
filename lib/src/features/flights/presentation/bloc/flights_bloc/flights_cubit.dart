@@ -1,9 +1,9 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flight_booking/src/core/network/error_handler/network_exceptions.dart';
+import 'package:flight_booking/src/core/utils/enums.dart';
 import 'package:flight_booking/src/features/flights/data/models/flight_model.dart';
 import 'package:flight_booking/src/features/flights/domain/usecases/get_flights_usecase.dart';
-import 'package:meta/meta.dart';
 
 part 'flights_state.dart';
 

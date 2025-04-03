@@ -1,6 +1,5 @@
 part of 'flights_cubit.dart';
 
-@immutable
 class FlightsState extends Equatable {
   final RequestState flightsState;
   final String errorMessage;
@@ -28,4 +27,3 @@ class FlightsState extends Equatable {
   List<Object?> get props => [flightsState, errorMessage, flights];
 }
 
-enum RequestState { initial, loading, success, error, loadMore }

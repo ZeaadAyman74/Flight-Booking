@@ -29,7 +29,7 @@ class SearchCard extends StatelessWidget {
         margin:EdgeInsets.only(bottom: 32.h),
         padding:  EdgeInsets.all(20.w),
         child: Column(
-          children: [
+          children:const [
             DepartureField(),
             DestinationField(),
             FlightDateField()

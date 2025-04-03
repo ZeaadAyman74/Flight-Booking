@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flight_booking/src/core/network/dio/dio_factory.dart';
+import 'package:flight_booking/src/features/booking/presentation/bloc/booking_cubit.dart';
 import 'package:flight_booking/src/features/flights/data/data_source/remote/flights_api_service.dart';
 import 'package:flight_booking/src/features/flights/data/repos/flights_repo.dart';
 import 'package:flight_booking/src/features/flights/domain/repos/base_flights_repo.dart';
@@ -43,5 +44,8 @@ class DependencyInjection {
           () => SearchCubit(),
     );
 
+    getIt.registerFactory<BookingCubit>(
+          () => BookingCubit(),
+    );
   }
 }

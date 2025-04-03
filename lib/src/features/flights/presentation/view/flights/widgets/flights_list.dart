@@ -1,4 +1,5 @@
 import 'package:flight_booking/gen/assets.gen.dart';
+import 'package:flight_booking/src/core/utils/enums.dart';
 import 'package:flight_booking/src/core/widgets/animated_error_widget.dart';
 import 'package:flight_booking/src/core/widgets/animated_progress_indicator.dart';
 import 'package:flight_booking/src/features/flights/presentation/bloc/flights_bloc/flights_cubit.dart';
@@ -17,7 +18,7 @@ class FlightsList extends StatelessWidget {
       builder: (context, state) {
         if (state.flightsState == RequestState.loading &&
             state.flights.isEmpty) {
-          return Center(child: AnimatedIndicator());
+          return const Center(child: AnimatedIndicator());
         }
         if (state.flightsState == RequestState.error && state.flights.isEmpty) {
           return AnimatedErrorWidget(
@@ -27,7 +28,7 @@ class FlightsList extends StatelessWidget {
         }
         if (state.flightsState == RequestState.success &&
             state.flights.isEmpty) {
-          return EmptyFlightsWidget();
+          return const EmptyFlightsWidget();
         }
         return ListView.separated(
             padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 20.h),

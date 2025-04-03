@@ -33,7 +33,7 @@ class FlightCard extends StatelessWidget {
               departureTime: flight.departureTime,
               arrivalTime: flight.departureTime,
             ),
-            PriceAndBookButton(price: flight.price!),
+            PriceAndBookButton(flight: flight),
           ],
         ),
       ),

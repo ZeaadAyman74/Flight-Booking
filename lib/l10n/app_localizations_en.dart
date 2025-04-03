@@ -56,4 +56,46 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get departure => 'Departure';
+
+  @override
+  String get total_price => 'Total Price';
+
+  @override
+  String get passenger_details => 'Passenger Details';
+
+  @override
+  String get full_name => 'Full Name';
+
+  @override
+  String get passport_number => 'Passport Number';
+
+  @override
+  String get expiry_date => 'Expiry Date';
+
+  @override
+  String get seat_preference => 'Seat Preference';
+
+  @override
+  String get meal_preference => 'Meal Preference';
+
+  @override
+  String get email => 'Email';
+
+  @override
+  String get phone_number => 'Phone Number';
+
+  @override
+  String get special_requests => 'Special Requests';
+
+  @override
+  String get optional => '(Optional)';
+
+  @override
+  String get select_date => 'Select Date';
+
+  @override
+  String get confirm_booking => 'Confirm Booking';
+
+  @override
+  String get required_field => 'Required Field';
 }
