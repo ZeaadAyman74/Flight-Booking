@@ -14,9 +14,6 @@ class SearchQueryModel {
           departure: map['from'],
           date: DateTime.parse(map['date']));
 
-  Map<String,dynamic>toMap()=>{
-    'to':destination,
-    'from':departure,
-    "date":date.toTimeStampFormat
-  };
+  Map<String, dynamic> toMap() =>
+      {'to': destination, 'from': departure, "date": date.toTimeStampFormat};
 }

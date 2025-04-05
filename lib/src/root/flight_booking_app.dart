@@ -19,7 +19,7 @@ class FlightBookingApp extends StatelessWidget {
         theme: lightTheme,
         supportedLocales: AppLocalizations.supportedLocales,
         localizationsDelegates: AppLocalizations.localizationsDelegates,
-        routerConfig: AppRouter.router,
+        routerConfig: AppRouter.router(),
       ),
     );
 

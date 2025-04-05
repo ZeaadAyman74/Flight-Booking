@@ -1,3 +1,4 @@
+import 'package:flight_booking/src/features/booking/presentation/view/widgets/booking_bloc_listener.dart';
 import 'package:flight_booking/src/features/booking/presentation/view/widgets/confirm_booking_button.dart';
 import 'package:flight_booking/src/features/booking/presentation/view/widgets/flight_summary/flight_summary_card.dart';
 import 'package:flight_booking/src/features/booking/presentation/view/widgets/passenger_form/passenger_form.dart';
@@ -12,14 +13,16 @@ class BookingBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      padding:  EdgeInsets.all(20.w),
-      child: Column(
-        children: [
-          FlightSummary(flight: flight),
-          const PassengerForm(),
-          const ConfirmBookingButton(),
-        ],
+    return BookingBlocListener(
+      child: SingleChildScrollView(
+        padding:  EdgeInsets.all(20.w),
+        child: Column(
+          children: [
+            FlightSummary(flight: flight),
+            const PassengerForm(),
+            const ConfirmBookingButton(),
+          ],
+        ),
       ),
     );
   }

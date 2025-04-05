@@ -1,4 +1,6 @@
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:dio/dio.dart';
+import 'package:flight_booking/src/core/network/connection_info.dart';
 import 'package:flight_booking/src/core/network/dio/dio_factory.dart';
 import 'package:flight_booking/src/features/booking/presentation/bloc/booking_cubit.dart';
 import 'package:flight_booking/src/features/flights/data/data_source/remote/flights_api_service.dart';
@@ -18,6 +20,13 @@ class DependencyInjection {
       () => DioFactory.getDio(),
     );
 
+    getIt.registerLazySingleton<Connectivity>(
+      () => Connectivity(),
+    );
+
+    getIt.registerLazySingleton<NetworkInfo>(
+      () => NetworkInfoImpl(getIt<Connectivity>()),
+    );
     //---------------------- Api Services --------------------------------------
 
     getIt.registerFactory<FlightsApiService>(
@@ -26,26 +35,26 @@ class DependencyInjection {
 
     //---------------------- Repos ---------------------------------------------
     getIt.registerFactory<BaseFlightsRepo>(
-          () => FlightsRepo(getIt()),
+      () => FlightsRepo(getIt(),getIt()),
     );
 
     //---------------------- use case ------------------------------------------
 
     getIt.registerFactory<GetFlightsUseCase>(
-          () => GetFlightsUseCase(getIt()),
+      () => GetFlightsUseCase(getIt()),
     );
 
     //---------------------- Bloc ---------------------------------------------
     getIt.registerFactory<FlightsCubit>(
-          () => FlightsCubit(getIt()),
+      () => FlightsCubit(getIt()),
     );
 
     getIt.registerFactory<SearchCubit>(
-          () => SearchCubit(),
+      () => SearchCubit(),
     );
 
     getIt.registerFactory<BookingCubit>(
-          () => BookingCubit(),
+      () => BookingCubit(),
     );
   }
 }

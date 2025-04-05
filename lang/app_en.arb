@@ -26,8 +26,16 @@
   "email": "Email",
   "phone_number": "Phone Number",
   "special_requests": "Special Requests",
+  "enter_valid_email": "Please enter a valid email address",
+  "enter_valid_phone_number": "Please enter a valid phone number",
+  "enter_valid_passport_number": "Please enter a valid passport number",
   "optional": "(Optional)",
   "select_date": "Select Date",
   "confirm_booking": "Confirm Booking",
-  "required_field": "Required Field"
+  "required_field": "Required Field",
+  "ok": "Ok",
+  "retry": "Retry",
+  "booking_confirmed": "Booking Confirmed",
+  "have_save_and_pleasant_journey": "Have a safe and pleasant journey",
+  "flight": "Flight {flightNumber}"
 }

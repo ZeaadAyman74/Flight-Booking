@@ -20,7 +20,7 @@ class _FlightsScreenState extends State<FlightsScreen> {
 
   @override
   void initState() {
-    cubit.getMockFlights();
+    cubit.getFlightsWithError();
     super.initState();
   }
 

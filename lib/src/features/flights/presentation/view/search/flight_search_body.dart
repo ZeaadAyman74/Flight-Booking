@@ -1,5 +1,5 @@
 import 'package:flight_booking/src/features/flights/presentation/view/search/widgets/search_button.dart';
-import 'package:flight_booking/src/features/flights/presentation/view/search/widgets/search_card/search_card.dart';
+import 'package:flight_booking/src/features/flights/presentation/view/search/widgets/search_form/search_form.dart';
 import 'package:flight_booking/src/features/flights/presentation/view/search/widgets/title_and_subtitle.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -15,8 +15,8 @@ class FlightSearchBody extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: const [
           TitleAndSubtitle(),
-          SearchCard(),
-          SearchButton()
+          SearchForm(),
+          SearchButton(key: Key("searchButton"),)
         ],
       ),
     );

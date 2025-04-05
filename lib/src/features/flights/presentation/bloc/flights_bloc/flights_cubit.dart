@@ -3,6 +3,7 @@ import 'package:equatable/equatable.dart';
 import 'package:flight_booking/src/core/network/error_handler/network_exceptions.dart';
 import 'package:flight_booking/src/core/utils/enums.dart';
 import 'package:flight_booking/src/features/flights/data/models/flight_model.dart';
+import 'package:flight_booking/src/features/flights/data/models/search_query_model.dart';
 import 'package:flight_booking/src/features/flights/domain/usecases/get_flights_usecase.dart';
 
 part 'flights_state.dart';
@@ -14,12 +15,12 @@ class FlightsCubit extends Cubit<FlightsState> {
 
   //-----------------------------------------------------------------------
 
-  Future<void> getFlights() async {
+  Future<void> getFlights({SearchQueryModel? searchQuery}) async {
     if (state.flightsState == RequestState.loading && state.flights.isEmpty) {
       return;
     }
     emit(state.copyWith(flightsState: RequestState.loading));
-    final result = await getFlightsUseCase();
+    final result = await getFlightsUseCase(searchQuery: searchQuery);
     result.when(
       success: (data) {
         List<FlightModel> flights = data.flights;
@@ -35,7 +36,7 @@ class FlightsCubit extends Cubit<FlightsState> {
   }
   //-----------------------------------------------------------------------
 
-  Future<void> getMockFlights() async {
+  Future<void> getSuccessFlights() async {
     if (state.flightsState == RequestState.loading && state.flights.isEmpty) {
       return;
     }
@@ -49,6 +50,34 @@ class FlightsCubit extends Cubit<FlightsState> {
               10,
               (index) => FlightModel.dummy(),
             )));
+      },
+    );
+  }
+
+  Future<void>getEmptyFlights()async{
+    if (state.flightsState == RequestState.loading && state.flights.isEmpty) {
+      return;
+    }
+    emit(state.copyWith(flightsState: RequestState.loading));
+    Future.delayed(
+      Duration(seconds: 1),
+          () {
+        emit(state.copyWith(
+            flightsState: RequestState.success,
+            flights: []));
+      },
+    );
+  }
+
+  Future<void>getFlightsWithError()async{
+    if (state.flightsState == RequestState.loading && state.flights.isEmpty) {
+      return;
+    }
+    emit(state.copyWith(flightsState: RequestState.loading));
+    Future.delayed(
+      Duration(seconds: 1),
+          () {
+        emit(state.copyWith(flightsState: RequestState.error,errorMessage: "Something went wrong, please try again"));
       },
     );
   }

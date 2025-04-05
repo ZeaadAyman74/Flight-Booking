@@ -1,3 +1,5 @@
+import 'package:flight_booking/src/core/extensions/context_extensions.dart';
+import 'package:flight_booking/src/core/extensions/ui_extensions.dart';
 import 'package:flight_booking/src/features/booking/presentation/view/widgets/flight_summary/airline_widget.dart';
 import 'package:flight_booking/src/features/booking/presentation/view/widgets/flight_summary/departure_and_arrival_time.dart';
 import 'package:flight_booking/src/features/booking/presentation/view/widgets/flight_summary/summary_total_price.dart';
@@ -12,26 +14,37 @@ class FlightSummary extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      elevation: 4,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12),
-      ),
+    return Container(
+      padding:  EdgeInsets.symmetric(vertical: 16.h,horizontal: 14.w,),
       margin: EdgeInsets.only(bottom: 30.h),
-      child: Padding(
-        padding:  EdgeInsets.symmetric(horizontal: 14.w,vertical: 16.h),
-        child: Column(
-          children: [
-            AirlineWidget(
-              airlineName: flight.airline!,
-            ),
-            DepartureAndArrivalTime(
-                departureTime: flight.departureTime,
-                arrivalTime: flight.arrivalTime),
-            Divider(height: 30.h),
-            SummaryTotalPrice(price: flight.price)
-          ],
-        ),
+      decoration: BoxDecoration(
+        color: context.themeData.cardColor,
+        borderRadius: 15.br,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.1),
+            blurRadius: 5,
+            offset: const Offset(3, 1),
+          ),
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.1),
+            blurRadius: 5,
+            offset: const Offset(-3, 0),
+          ),
+        ],
+      ),
+      child: Column(
+        children: [
+          AirlineWidget(
+            airlineName: flight.airline,
+            flightNumber: flight.flightNumber,
+          ),
+          DepartureAndArrivalTime(
+              departureTime: flight.departureTime,
+              arrivalTime: flight.arrivalTime,duration: flight.duration,),
+          Divider(height: 30.h),
+          SummaryTotalPrice(price: flight.price)
+        ],
       ),
     );
   }

@@ -4,14 +4,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class DurationDivider extends StatelessWidget {
   const DurationDivider({super.key,required this.duration});
-final String duration;
+final String? duration;
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding:  EdgeInsets.symmetric(horizontal: 8.w),
       child: Column(
         children: [
-          // Airplane icon with dotted line
           Stack(
             alignment: Alignment.center,
             children: [
@@ -43,9 +42,9 @@ final String duration;
             ],
           ),
           SizedBox(height: 4.h),
-          // Estimated duration (you could calculate this if you have actual times)
+         if(duration != null)
           Text(
-            duration,
+            duration!,
             style: context.themeData.textTheme.bodySmall,
           ),
         ],

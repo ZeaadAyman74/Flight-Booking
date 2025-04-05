@@ -1,5 +1,6 @@
 import 'package:flight_booking/src/core/extensions/context_extensions.dart';
 import 'package:flight_booking/src/core/router/routes.dart';
+import 'package:flight_booking/src/core/utils/utils.dart';
 import 'package:flight_booking/src/core/widgets/custom_button.dart';
 import 'package:flight_booking/src/features/flights/data/models/search_query_model.dart';
 import 'package:flight_booking/src/features/flights/presentation/bloc/search_bloc/search_cubit.dart';
@@ -19,6 +20,7 @@ class SearchButton extends StatelessWidget {
         if (searchCubit.formKey.currentState!.validate()) {
           if (searchCubit.state.selectedDate == null) {
             context.showMessageDialog(
+              key: const Key("dateValidationKey"),
                 message: context.localization.please_select_travel_date);
             return;
           }

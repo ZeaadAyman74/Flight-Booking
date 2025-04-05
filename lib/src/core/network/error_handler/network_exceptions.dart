@@ -163,7 +163,7 @@ abstract class NetworkExceptions with _$NetworkExceptions {
   }
 
   static String getErrorMessage(NetworkExceptions exception) {
-    var errorMessage = "";
+    String errorMessage = "";
     exception.when(
       notImplemented: (ValidationModel? validation) {
         errorMessage = "";
@@ -177,8 +177,8 @@ abstract class NetworkExceptions with _$NetworkExceptions {
       internalServerError: (String error, ValidationModel? validation) {
         errorMessage = error;
       },
-      notFound: (String reason, ValidationModel? validation) {
-        errorMessage = reason;
+      notFound: (String? reason, ValidationModel? validation) {
+        errorMessage = reason??'Not Found';
       },
       serviceUnavailable: (ValidationModel? validation) {
         errorMessage = "";

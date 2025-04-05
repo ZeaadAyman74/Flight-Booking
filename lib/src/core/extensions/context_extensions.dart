@@ -40,12 +40,13 @@ extension BuildContextExtension on BuildContext {
 
   double get bottom => MediaQuery.of(this).viewInsets.bottom;
 
-  void showMessageDialog({String? title, required String message}) {
+  void showMessageDialog({Key? key,String? title, required String message}) {
     if (Platform.isAndroid) {
       showDialog(
         context: this,
         builder: (context) {
           return AlertDialog(
+            key: key,
             title: title != null
                 ? Text(
               title,
@@ -83,6 +84,7 @@ extension BuildContextExtension on BuildContext {
       showCupertinoDialog(
         context: this,
         builder: (context) => CupertinoAlertDialog(
+          key:key,
           title: Text(message,
               style: const TextStyle(
                   color: Colors.black, fontWeight: FontWeight.w600)),

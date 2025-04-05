@@ -48,8 +48,11 @@ class $AssetsLottieGen {
   /// File path: assets/lottie/error.json
   String get error => 'assets/lottie/error.json';
 
+  /// File path: assets/lottie/success.json
+  String get success => 'assets/lottie/success.json';
+
   /// List of all assets
-  List<String> get values => [emptyFlights, error];
+  List<String> get values => [emptyFlights, error, success];
 }
 
 class Assets {

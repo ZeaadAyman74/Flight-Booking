@@ -72,20 +72,6 @@ class FlightDateField extends StatelessWidget {
       initialDate: now,
       firstDate: now,
       lastDate: now.add(const Duration(days: 365)),
-      builder: (context, child) {
-        return Theme(
-          data: context.themeData.copyWith(
-            colorScheme: ColorScheme.light(
-              primary: context.themeData.colorScheme.primary,
-              onPrimary: context.themeData.scaffoldBackgroundColor,
-              surface: context.themeData.scaffoldBackgroundColor,
-              onSurface: context.themeData.primaryColorDark,
-            ),
-            dialogBackgroundColor: context.themeData.scaffoldBackgroundColor,
-          ),
-          child: child!,
-        );
-      },
     );
     if (pickedDate != null && context.mounted) {
       context.read<SearchCubit>().selectDate(pickedDate);
