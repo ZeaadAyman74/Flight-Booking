@@ -14,8 +14,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 class AppRouter {
-  static GoRouter router([String? initialLocation]) => GoRouter(
-    initialLocation:initialLocation ?? Routes.search ,
+  static GoRouter router = GoRouter(
+    initialLocation: Routes.search ,
     routes: [
       GoRoute(
           path: Routes.search,

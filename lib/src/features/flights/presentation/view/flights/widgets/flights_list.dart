@@ -11,15 +11,25 @@ class FlightsList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomAnimatedWidget(
-      child: ListView.separated(
-          padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 20.h),
-          physics: BouncingScrollPhysics(),
-          itemBuilder: (context, index) => FlightCard(
-                flight: flights[index],
+    return ListView.separated(
+        padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 20.h),
+        physics: BouncingScrollPhysics(),
+        cacheExtent: 5000,
+        itemBuilder: (context, index) {
+          return TweenAnimationBuilder(
+            duration: Duration(milliseconds: 300 + index * 100),
+            tween: Tween<double>(begin: 0, end: 1),
+            builder: (context, value, child) => Opacity(
+              opacity: value,
+              child: Transform.translate(
+                offset: Offset(0, 30 * (1 - value)),
+                child: child,
               ),
-          separatorBuilder: (context, index) => 10.verticalSpace,
-          itemCount: flights.length),
-    );
+            ),
+            child: FlightCard(flight: flights[index]),
+          );
+        },
+        separatorBuilder: (context, index) => 10.verticalSpace,
+        itemCount: flights.length);
   }
 }
