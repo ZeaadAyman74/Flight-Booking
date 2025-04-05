@@ -21,16 +21,11 @@ class _FlightsApiService implements FlightsApiService {
 
   @override
   Future<FlightsResponseModel> getFlights({
-    String? departureCity,
-    String? destinationCity,
-    String? date,
+    Map<String, dynamic>? searchQueries,
   }) async {
     final _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{
-      r'departure': departureCity,
-      r'destination': destinationCity,
-      r'date': date,
-    };
+    final queryParameters = <String, dynamic>{};
+    queryParameters.addAll(searchQueries ?? <String, dynamic>{});
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;

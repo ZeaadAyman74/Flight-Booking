@@ -1,4 +1,5 @@
 import 'package:flight_booking/src/core/extensions/context_extensions.dart';
+import 'package:flight_booking/src/core/extensions/ui_extensions.dart';
 import 'package:flight_booking/src/core/widgets/custom_text_field.dart';
 import 'package:flight_booking/src/features/flights/presentation/bloc/search_bloc/search_cubit.dart';
 import 'package:flutter/material.dart';
@@ -15,9 +16,9 @@ class DepartureField extends StatelessWidget {
       child: CustomTextField(
         controller: context.read<SearchCubit>().departureController,
         labelText: context.localization.from,
-        prefixIcon: Icon(Icons.flight_takeoff_rounded,color: context.themeData.primaryColor,),
+        prefixIcon: Icon(Icons.flight_takeoff_rounded,color: context.themeData.primaryColor,size: 20.w,),
         validator: (value) {
-          if (value == null || value.isEmpty) {
+          if (value.isNullOrEmpty) {
             return context.localization.please_enter_departure_city;
           }
           return null;

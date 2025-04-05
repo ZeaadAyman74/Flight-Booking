@@ -26,9 +26,17 @@
   "email": "البريد الإلكتروني",
   "phone_number": "رقم الهاتف",
   "special_requests": "طلبات خاصة",
+  "enter_valid_email": "الرجاء إدخال عنوان بريد إلكتروني صالح",
+  "enter_valid_phone_number": "الرجاء إدخال رقم هاتف صالح",
+  "enter_valid_passport_number": "الرجاء إدخال رقم جواز سفر صالح",
   "optional": "(اختياري)",
   "select_date": "اختر التاريخ",
   "confirm_booking": "تاكيد الحجز",
-  "required_field": "هذا الحقل مطلوب"
+  "required_field": "هذا الحقل مطلوب",
+  "ok": "حسنا",
+  "retry": "إعادة المحاولة",
+  "booking_confirmed": "تم تأكيد الحجز",
+  "have_save_and_pleasant_journey": "نتمنى لك رحلة آمنة وممتعة",
+  "flight": "{flightNumber} رحلة"
 
 }

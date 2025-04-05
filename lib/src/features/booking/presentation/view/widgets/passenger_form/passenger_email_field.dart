@@ -1,4 +1,6 @@
 import 'package:flight_booking/src/core/extensions/context_extensions.dart';
+import 'package:flight_booking/src/core/extensions/ui_extensions.dart';
+import 'package:flight_booking/src/core/utils/app_regex.dart';
 import 'package:flight_booking/src/core/widgets/custom_text_field.dart';
 import 'package:flight_booking/src/features/booking/presentation/bloc/booking_cubit.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +21,15 @@ class PassengerEmailField extends StatelessWidget {
         Icons.email,
         size: 20.w,
       ),
-      validator: (value) => value!.isEmpty ? context.localization.required_field : null,
+      validator: (value) {
+        if(value.isNullOrEmpty){
+          return context.localization.required_field;
+        }
+        if(!AppRegex.isEmailValid(value!)){
+          return context.localization.enter_valid_email;
+        }
+        return null;
+      }
     );
   }
 }

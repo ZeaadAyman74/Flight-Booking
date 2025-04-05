@@ -1,3 +1,4 @@
+import 'package:flight_booking/l10n/app_localizations.dart';
 import 'package:flight_booking/src/core/extensions/context_extensions.dart';
 import 'package:flight_booking/src/core/extensions/ui_extensions.dart';
 import 'package:flutter/material.dart';
@@ -42,7 +43,7 @@ class AirlineHeader extends StatelessWidget {
                     overflow: TextOverflow.ellipsis,
                     style: context.textTheme.titleMedium),
                 Text(
-                  'Flight $flightNumber',
+                  AppLocalizations.of(context)!.flight(flightNumber??''),
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                   style: context.textTheme.bodySmall?.copyWith(

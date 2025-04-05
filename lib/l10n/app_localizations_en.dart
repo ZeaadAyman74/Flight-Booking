@@ -88,6 +88,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get special_requests => 'Special Requests';
 
   @override
+  String get enter_valid_email => 'Please enter a valid email address';
+
+  @override
+  String get enter_valid_phone_number => 'Please enter a valid phone number';
+
+  @override
+  String get enter_valid_passport_number => 'Please enter a valid passport number';
+
+  @override
   String get optional => '(Optional)';
 
   @override
@@ -98,4 +107,21 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get required_field => 'Required Field';
+
+  @override
+  String get ok => 'Ok';
+
+  @override
+  String get retry => 'Retry';
+
+  @override
+  String get booking_confirmed => 'Booking Confirmed';
+
+  @override
+  String get have_save_and_pleasant_journey => 'Have a safe and pleasant journey';
+
+  @override
+  String flight(Object flightNumber) {
+    return 'Flight $flightNumber';
+  }
 }

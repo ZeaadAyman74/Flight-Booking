@@ -1,4 +1,4 @@
-class PassengerData {
+class PassengerDataModel {
   final String fullName;
   final String passportNumber;
   final DateTime? passportExpiry;
@@ -6,7 +6,7 @@ class PassengerData {
   final String contactPhone;
   final String? specialRequests;
 
-  const PassengerData({
+  const PassengerDataModel({
     required this.fullName,
     required this.passportNumber,
     this.passportExpiry,

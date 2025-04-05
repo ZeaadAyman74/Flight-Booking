@@ -12,11 +12,12 @@ class PassportExpiryDate extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () async {
+        DateTime now = DateTime.now();
         final date = await showDatePicker(
           context: context,
-          initialDate: DateTime.now().add(const Duration(days: 365)),
-          firstDate: DateTime.now(),
-          lastDate: DateTime.now().add(const Duration(days: 365 * 10)),
+          initialDate: now,
+          firstDate: now,
+          lastDate: now.add(const Duration(days: 365)),
         );
         if (date != null && context.mounted) {
           context.read<BookingCubit>().changePassportExpireDate(date);

@@ -257,6 +257,24 @@ abstract class AppLocalizations {
   /// **'Special Requests'**
   String get special_requests;
 
+  /// No description provided for @enter_valid_email.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter a valid email address'**
+  String get enter_valid_email;
+
+  /// No description provided for @enter_valid_phone_number.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter a valid phone number'**
+  String get enter_valid_phone_number;
+
+  /// No description provided for @enter_valid_passport_number.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter a valid passport number'**
+  String get enter_valid_passport_number;
+
   /// No description provided for @optional.
   ///
   /// In en, this message translates to:
@@ -280,6 +298,36 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Required Field'**
   String get required_field;
+
+  /// No description provided for @ok.
+  ///
+  /// In en, this message translates to:
+  /// **'Ok'**
+  String get ok;
+
+  /// No description provided for @retry.
+  ///
+  /// In en, this message translates to:
+  /// **'Retry'**
+  String get retry;
+
+  /// No description provided for @booking_confirmed.
+  ///
+  /// In en, this message translates to:
+  /// **'Booking Confirmed'**
+  String get booking_confirmed;
+
+  /// No description provided for @have_save_and_pleasant_journey.
+  ///
+  /// In en, this message translates to:
+  /// **'Have a safe and pleasant journey'**
+  String get have_save_and_pleasant_journey;
+
+  /// No description provided for @flight.
+  ///
+  /// In en, this message translates to:
+  /// **'Flight {flightNumber}'**
+  String flight(Object flightNumber);
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

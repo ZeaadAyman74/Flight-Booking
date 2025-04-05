@@ -24,6 +24,7 @@ ThemeData get lightTheme => ThemeData(
     ),
     splashColor: Colors.transparent,
     highlightColor: ColorsManager.black.withValues(alpha: 0.1),
+    shadowColor: ColorsManager.black.withValues(alpha: 0.1),
     textSelectionTheme: const TextSelectionThemeData(
       cursorColor: ColorsManager.gray,
     ),

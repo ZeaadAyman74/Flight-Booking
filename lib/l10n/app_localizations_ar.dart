@@ -88,6 +88,15 @@ class AppLocalizationsAr extends AppLocalizations {
   String get special_requests => 'طلبات خاصة';
 
   @override
+  String get enter_valid_email => 'الرجاء إدخال عنوان بريد إلكتروني صالح';
+
+  @override
+  String get enter_valid_phone_number => 'الرجاء إدخال رقم هاتف صالح';
+
+  @override
+  String get enter_valid_passport_number => 'الرجاء إدخال رقم جواز سفر صالح';
+
+  @override
   String get optional => '(اختياري)';
 
   @override
@@ -98,4 +107,21 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get required_field => 'هذا الحقل مطلوب';
+
+  @override
+  String get ok => 'حسنا';
+
+  @override
+  String get retry => 'إعادة المحاولة';
+
+  @override
+  String get booking_confirmed => 'تم تأكيد الحجز';
+
+  @override
+  String get have_save_and_pleasant_journey => 'نتمنى لك رحلة آمنة وممتعة';
+
+  @override
+  String flight(Object flightNumber) {
+    return '$flightNumber رحلة';
+  }
 }

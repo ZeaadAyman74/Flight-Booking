@@ -7,6 +7,7 @@ class FlightModel extends Equatable {
   final String? departureTime;
   final String? arrivalTime;
   final double? price;
+  final String? duration;
 
   const FlightModel(
       {required this.id,
@@ -14,7 +15,8 @@ class FlightModel extends Equatable {
       required this.flightNumber,
       required this.departureTime,
       required this.arrivalTime,
-      required this.price});
+      required this.price,
+      this.duration});
 
   factory FlightModel.fromJson(Map<String, dynamic> json) {
     return FlightModel(
@@ -23,6 +25,7 @@ class FlightModel extends Equatable {
         flightNumber: json['flight_number'],
         departureTime: json['departure'],
         arrivalTime: json['arrival'],
+        duration: "4h 30m",
         price: json['price']);
   }
 
@@ -31,10 +34,11 @@ class FlightModel extends Equatable {
       airline: "Egypt Air",
       flightNumber: "0054",
       departureTime: "10:00 AM",
-      arrivalTime: "2:00 PM",
+      arrivalTime: "2:30 PM",
+      duration: "4h 30m",
       price: 300.0);
 
   @override
   List<Object?> get props =>
-      [id, flightNumber, departureTime, arrivalTime, price];
+      [id, flightNumber, departureTime, arrivalTime, duration, price];
 }

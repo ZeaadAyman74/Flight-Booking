@@ -5,10 +5,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class DepartureAndArrivalTime extends StatelessWidget {
   const DepartureAndArrivalTime(
-      {super.key, required this.departureTime, required this.arrivalTime});
+      {super.key, required this.departureTime, required this.arrivalTime,required this.duration});
 
   final String? departureTime;
   final String? arrivalTime;
+  final String? duration;
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +20,8 @@ class DepartureAndArrivalTime extends StatelessWidget {
             title: context.localization.departure, time: departureTime),
         Column(
           children: [
-            Text('4 h', style: TextStyle(color: Colors.grey[600])),
+            if(duration!=null)
+            Text(duration!, style: context.textTheme.bodySmall),
             Icon(Icons.airplanemode_active, size: 20.w),
           ],
         ),

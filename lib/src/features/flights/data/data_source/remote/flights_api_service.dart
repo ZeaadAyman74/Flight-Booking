@@ -11,7 +11,5 @@ abstract class FlightsApiService {
 
   @GET(ApiConstants.flights)
   Future<FlightsResponseModel> getFlights(
-      {@Query("departure") String? departureCity,
-      @Query("destination") String? destinationCity,
-      @Query("date") String? date});
+      {@Queries() Map<String, dynamic>? searchQueries});
 }

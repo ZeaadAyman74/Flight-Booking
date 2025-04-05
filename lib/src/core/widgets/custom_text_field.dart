@@ -85,6 +85,7 @@ class CustomTextField extends StatelessWidget {
           fontWeight: FontWeight.w500,
           fontSize: 10.sp,
         ),
+        errorMaxLines: 2,
         contentPadding: contentPadding,
         filled: filled,
         fillColor: fillColor,
